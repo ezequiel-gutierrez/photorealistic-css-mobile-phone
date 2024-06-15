@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to top, rgba(150,150,150,1) 55%, rgba(220,220,220,1) 63%);
+    width: 100vw;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+    transform: scale(0.6) translateY(-25%);
+}
+
+.frame {
+    width: 60vw;
+    aspect-ratio: 16/10;
+    padding: 2rem 2rem 2.5rem;
+    background-color: #282731;
+    box-shadow: 
+    0px 0px 10px #878589,
+    inset -50px 60px 65px -30px rgba(255,255,255,0.3),
+    inset 57px -79px 118px -43px rgba(0,0,0,0.3);;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    border-bottom: none;
+}
+
+.screen {
+    position: relative;
+    aspect-ratio: 16/10;
+    background-image: url("./low-poly-grid-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow:
+    39px -25px 82px -24px rgba(255,255,255,0.2),
+    inset 0px 0px 5px #1d1c22;
+}
+
+.screen::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(35deg,transparent 0%, rgba(220, 220, 220, 0.5) 65%, transparent 100%);
+    width: 756px;
+    aspect-ratio: 16/10;
+}
+
+.logo {
+    background-color: #fff;
+    z-index: -1;
+    width: 60vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 0px 0px 10px #878589;
+}
+
+.logo i {
+    width: 50vw;
+    text-align: center;
+    background: radial-gradient(circle, rgba(10,10,10,0.2) 0%, rgba(250,250,250,1) 70%);
+    padding: 0.7rem;
+    font-size: 2.5rem;
+}
+
+.upper-leg {
+    z-index: -2;
+    background: linear-gradient(rgba(10,10,10,0.5) 15%, rgba(250,250,250,1) 80%);
+    box-shadow: 20px 0px 56px 2px rgba(0,0,0,1);
+    width: 300px;
+    height: 50px;
+}
+
+.lower-leg {
+    width: 300px;
+    height: 50px;
+    box-shadow: 53px 0px 57px -24px rgba(0,0,0,1),
+    0px 0px 10px rgba(0,0,0,1);
+    background:
+    linear-gradient(rgba(250,250,250,1) 10%,
+    rgba(10,10,10,0.5) 90%);
+    transform: skewX(10deg) translateX(1.2%);
+}
+
+.stand {
+    z-index: -5;
+    width: 350px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    border-bottom: 75px solid rgba(200, 200, 200, 0.8);
+    box-shadow:  5px 18px 62px 37px rgba(0,0,0,0.3),
+    inset 0px 0px 78px 41px rgba(255, 255, 255, 1);
+    transform: translate(1.5%, -55%);
+}
